@@ -58,11 +58,11 @@ from sklearn.linear_model import LogisticRegression
 logreg = LogisticRegression()
 rfe = RFE(logreg, 18)
 rfe = rfe.fit(data_final[X], data_final[np.asarray(y)] )
-print(rfe.support_)
-print(rfe.ranking_)
+print ("Features sorted by their rank:")
+print (sorted(zip(map(lambda x: round(x, 4), rfe.ranking_), X)))
 
 
-cols=['Age','TotalPatientCancelled','ApptType_1ST POST OP','ApptType_6 MONTHS',
+cols=['Age','TotalPatientCancelled','TotalNoShow','ApptType_1ST POST OP','ApptType_6 MONTHS',
       'ApptType_CANCEL','ApptType_NEW PATIENT','ApptType_POST OP','ApptType_SAME DAY POST OP',
       'ApptType_SURGERY SIGN UP','MaritalStatus_S','Language_eng','Ethnicity_HS'] 
 X=data_final[cols]
