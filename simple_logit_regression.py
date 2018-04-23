@@ -21,7 +21,7 @@ data = pd.read_excel('GUL001_Appt_Data_fixed.xlsx').drop(['Unnamed: 22'], axis=1
 data = data[data['Age'] > 61]
 data = data[data['Age'] < 109]
 data['Age'].value_counts()
-data['ApptStatusId'] = data['ApptStatusId'].map(lambda x: 1 if x in [6,15,3,4,17,14] else 0)
+data['ApptStatusId'] = data['ApptStatusId'].map(lambda x: 1 if x in [1,2,3,4,5,6,9,14,15,16,17] else 0)
 data = data.drop(['Id','ApptStartTime','ApptEndTime','ApptCreatedDate','ApptStatus','ApptTypeId','ApptFacilityId','ApptLocation','ApptProviderName','ApptProviderId','PatientId','AccountNumber','PatientZip'], axis=1)
 
 
