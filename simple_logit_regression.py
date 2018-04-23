@@ -62,10 +62,9 @@ print(rfe.support_)
 print(rfe.ranking_)
 
 
-cols=['Age','TotalPatientCancelled','ApptType_1ST POST OP','ApptType_6 MONTHS','ApptType_B SCAN',
-      'ApptType_CANCEL','ApptType_NEW PATIENT','ApptType_POST OP','ApptType_SAME DAY POST OP','Gender_F','Gender_M',
-      'ApptType_SURGERY SIGN UP','MaritalStatus_S','Language_eng','Language_por','Language_spa',
-      'Language_swa','Language_urd','Ethnicity_DE','Ethnicity_HS'] 
+cols=['Age','TotalPatientCancelled','ApptType_1ST POST OP','ApptType_6 MONTHS',
+      'ApptType_CANCEL','ApptType_NEW PATIENT','ApptType_POST OP','ApptType_SAME DAY POST OP',
+      'ApptType_SURGERY SIGN UP','MaritalStatus_S','Language_eng','Ethnicity_HS'] 
 X=data_final[cols]
 y=data_final['ApptStatusId']
 
